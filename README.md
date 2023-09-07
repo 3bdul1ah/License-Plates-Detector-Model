@@ -124,7 +124,7 @@ Ensure the following Python libraries are installed for optimal operation of the
 
 3. **Navigate to the directory**
       ```bash
-      cd License-Plate-Detector  
+      cd UAE-License-Plates-Detector  
 
 3. **Setting up in an IDE**
     Once inside the project directory, open it with your preferred development environment, be it PyCharm, VSCode, or another editor. 
