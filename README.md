@@ -1,11 +1,20 @@
 # License Plate Detection
 
-<div style="display: flex; justify-content: space-between;">
-    <img src="https://mobisoftinfotech.com/resources/wp-content/uploads/2022/02/Number-Plate-Detection.png" alt="Image 1" style="width: 30%;">
-    <img src="https://wicard.net/wp-content/uploads/2023/02/spycam_00.jpg" alt="Image 2" style="width: 30%;">
-    <img src="https://external-preview.redd.it/bJqPlZPMEXpe3I0j3n2ufhf1CzIIFTnmZM_OtmUgC0M.png?width=640&crop=smart&format=pjpg&auto=webp&s=ce70f47bda7e9ebc49ec7f5da29174cb07d4ef14" alt="Image 3" style="width: 30%;">
-    <img src="https://i.ytimg.com/vi/WvqJDVjV5Mw/sddefault.jpg" alt="Image 4" style="width: 30%;">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+    <div style="width: 48%;">
+        <img src="https://mobisoftinfotech.com/resources/wp-content/uploads/2022/02/Number-Plate-Detection.png" alt="Image 1" style="width: 100%;">
+    </div>
+    <div style="width: 48%;">
+        <img src="https://wicard.net/wp-content/uploads/2023/02/spycam_00.jpg" alt="Image 2" style="width: 100%;">
+    </div>
+    <div style="width: 48%;">
+        <img src="https://i.ytimg.com/vi/WvqJDVjV5Mw/sddefault.jpg" alt="Image 3" style="width: 100%;">
+    </div>
+    <div style="width: 48%;">
+        <img src="https://external-preview.redd.it/bJqPlZPMEXpe3I0j3n2ufhf1CzIIFTnmZM_OtmUgC0M.png?width=640&crop=smart&format=pjpg&auto=webp&s=ce70f47bda7e9ebc49ec7f5da29174cb07d4ef14" alt="Image 4" style="width: 100%;">
+    </div>
 </div>
+
 
 
 
