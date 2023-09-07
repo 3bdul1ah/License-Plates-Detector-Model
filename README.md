@@ -125,11 +125,11 @@ Ensure the following Python libraries are installed for optimal operation of the
 ## User Guide
 1. **Clone the repo**
       ```bash
-      git clone https://github.com/3bdul1ah/License-Plate-Detector.git
+      git clone https://github.com/3bdul1ah/UAE-License-Plates-Detector.git
 
 3. **Navigate to the directory**
       ```bash
-      cd License-Plate-Detector  
+      cd UAE-License-Plate-Detector  
 
 3. **Setting up in an IDE**
     Once inside the project directory, open it with your preferred development environment, be it PyCharm, VSCode, or another editor. 
