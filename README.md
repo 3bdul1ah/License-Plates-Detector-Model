@@ -1,10 +1,24 @@
 # License Plate Detection
+<!-- Image 1: Object Detection -->
 <p align="center">
-  <img src="https://mobisoftinfotech.com/resources/wp-content/uploads/2022/02/Number-Plate-Detection.png" alt="Image 1" width="40%" style="margin: 10px;">
-  <img src="https://wicard.net/wp-content/uploads/2023/02/spycam_00.jpg" alt="Image 2" width="40%" style="margin: 10px;">
-  <img src="https://i.ytimg.com/vi/WvqJDVjV5Mw/sddefault.jpg" alt="Image 3" width="40%" style="margin: 10px;">
-  <img src="https://external-preview.redd.it/bJqPlZPMEXpe3I0j3n2ufhf1CzIIFTnmZM_OtmUgC0M.png?width=640&crop=smart&format=pjpg&auto=webp&s=ce70f47bda7e9ebc49ec7f5da29174cb07d4ef14" alt="Image 4" width="40%" style="margin: 10px;">
+  <img src="https://mobisoftinfotech.com/resources/wp-content/uploads/2022/02/Number-Plate-Detection.png" alt="Object Detection" width="40%" style="margin: 10px;">
 </p>
+
+<!-- Image 2: ESP32 Camera View -->
+<p align="center">
+  <img src="https://wicard.net/wp-content/uploads/2023/02/spycam_00.jpg" alt="ESP32 Camera View" width="40%" style="margin: 10px;">
+</p>
+
+<!-- Image 3: ESP32 Machine Learning -->
+<p align="center">
+  <img src="https://i.ytimg.com/vi/WvqJDVjV5Mw/sddefault.jpg" alt="ESP32 Machine Learning" width="40%" style="margin: 10px;">
+</p>
+
+<!-- Image 4: Raspberry Pi and ESP32 Server -->
+<p align="center">
+  <img src="https://external-preview.redd.it/bJqPlZPMEXpe3I0j3n2ufhf1CzIIFTnmZM_OtmUgC0M.png?width=640&crop=smart&format=pjpg&auto=webp&s=ce70f47bda7e9ebc49ec7f5da29174cb07d4ef14" alt="Raspberry Pi and ESP32 Server" width="40%" style="margin: 10px;">
+</p>
+
 
 
 
