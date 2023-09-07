@@ -1,8 +1,8 @@
 # License Plate Detection
 
 ![License Plate Detection Banner](https://mobisoftinfotech.com/resources/wp-content/uploads/2022/02/Number-Plate-Detection.png)
-![License Plate DetectiongggBanner](https://mobisoftinfotech.com/resources/wp-content/uploads/2022/02/Number-Plate-Detection.png)
-![License Plate Detegggction Banner](https://mobisoftinfotech.com/resources/wp-content/uploads/2022/02/Number-Plate-Detection.png)
+![License Plate DetectiongggBanner](https://wicard.net/wp-content/uploads/2023/02/spycam_00.jpg)
+![License Plate Detegggction Banner](https://external-preview.redd.it/bJqPlZPMEXpe3I0j3n2ufhf1CzIIFTnmZM_OtmUgC0M.png?width=640&crop=smart&format=pjpg&auto=webp&s=ce70f47bda7e9ebc49ec7f5da29174cb07d4ef14)
 
 
 
