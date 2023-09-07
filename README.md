@@ -1,35 +1,11 @@
 # License Plate Detection
-<!-- Style for headings -->
-<style>
-  h1 {
-    color: #333; /* Text color */
-    background-color: #f5f5f5; /* Background color */
-    padding: 10px; /* Padding */
-    border-radius: 5px; /* Rounded corners */
-  }
+<p align="center">
+  <img src="https://mobisoftinfotech.com/resources/wp-content/uploads/2022/02/Number-Plate-Detection.png" alt="Image 1" width="40%" style="margin: 10px;">
+  <img src="https://wicard.net/wp-content/uploads/2023/02/spycam_00.jpg" alt="Image 2" width="40%" style="margin: 10px;">
+  <img src="https://i.ytimg.com/vi/WvqJDVjV5Mw/sddefault.jpg" alt="Image 3" width="40%" style="margin: 10px;">
+  <img src="https://external-preview.redd.it/bJqPlZPMEXpe3I0j3n2ufhf1CzIIFTnmZM_OtmUgC0M.png?width=640&crop=smart&format=pjpg&auto=webp&s=ce70f47bda7e9ebc49ec7f5da29174cb07d4ef14" alt="Image 4" width="40%" style="margin: 10px;">
+</p>
 
-  h2 {
-    color: #007acc;
-    border-bottom: 2px solid #007acc;
-  }
-
-  /* Style for images */
-  img {
-    width: 40%;
-    margin: 10px;
-    border: 1px solid #ccc; /* Add border to images */
-    border-radius: 5px; /* Rounded corners for images */
-  }
-</style>
-
-# License Plate Detection
-
-<div style="display: flex; justify-content: center; align-items: center;">
-    <img src="https://mobisoftinfotech.com/resources/wp-content/uploads/2022/02/Number-Plate-Detection.png" alt="Image 1">
-    <img src="https://wicard.net/wp-content/uploads/2023/02/spycam_00.jpg" alt="Image 2">
-    <img src="https://i.ytimg.com/vi/WvqJDVjV5Mw/sddefault.jpg" alt="Image 3">
-    <img src="https://external-preview.redd.it/bJqPlZPMEXpe3I0j3n2ufhf1CzIIFTnmZM_OtmUgC0M.png?width=640&crop=smart&format=pjpg&auto=webp&s=ce70f47bda7e9ebc49ec7f5da29174cb07d4ef14" alt="Image 4">
-</div>
 
 
 
