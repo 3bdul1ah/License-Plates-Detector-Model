@@ -1,5 +1,4 @@
 # License Plate Detection
-
 <!-- Style for headings -->
 <style>
   h1 {
