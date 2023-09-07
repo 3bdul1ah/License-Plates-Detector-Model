@@ -6,7 +6,7 @@ import numpy as np
 from io import BytesIO
 import matplotlib.pyplot as plt
 
-model_path = os.path.join('.', 'runs', 'detect', 'train24', 'weights', 'last.pt')
+model_path = os.path.join('.', 'runs', 'detect', 'train23', 'weights', 'last.pt')
 
 specific_classes = ['0', '1', '2', '3', '4', '5', '6', '7', '8',
                     '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
@@ -37,10 +37,11 @@ threshold = 0.4
 
 def detect_text(image):
     output_array = []
-    state_name = "couldn\'t be detected"
+    state_name = "couldn't be detected"
+    plate_category = None
+    plate_number = ""
 
     H, W, _ = image.shape
-
     results = model(image)[0]
 
     # Sort the results by the x-axis position
@@ -48,23 +49,25 @@ def detect_text(image):
 
     for x1, y1, x2, y2, score, class_id in sorted_results:
         class_name = model.names[class_id]
+
         if (score > threshold) and (class_name in specific_classes):
             output_array.append(class_name)
-        if score > threshold and (class_name in state_classes):
+        elif score > threshold and (class_name in state_classes):
             state_name = state_classes[class_name]
             break
 
-    plate_category = None
-    plate_number = ""
+    number_list = []
 
     for char in output_array:
-        if char.isalpha():
-            plate_category = char
-        elif char.isdigit():
-            if (state_name == 'Abu Dhabi' or state_name == 'Sharjah') and plate_category is None:
-                plate_category = char
-            else:
-                plate_number += char
+        if char.isdigit():
+            number_list.append(char)
+
+    if len(number_list) == 1 and (state_name in ['Abu Dhabi', 'Sharjah']):
+        plate_category = number_list[0]
+    elif len(number_list) > 1:
+        plate_number = ''.join(number_list)
+        if len(output_array) > len(number_list):
+            plate_category = output_array[0]
 
     return plate_category, plate_number, state_name
 
@@ -72,6 +75,7 @@ def detect_text(image):
 def main():
     # URL list containing image URLs
     image_urls = [input('Enter Url: ')]
+
 
     for image_url in image_urls:
         response = requests.get(image_url)
@@ -87,19 +91,14 @@ def main():
 
             for result in sorted_results:
                 x1, y1, x2, y2, score, class_id = result
-                detected_class = results.names[int(class_id)]
-                print("Detected Object: ", detected_class)
-                print(f"Coordinates: Top-left({int(x1)}, {int(y1)}), Bottom-right({int(x2)}, {int(y2)})")
-                print(f"Score: {score}")
 
-                if score > threshold and detected_class == 'plate':
+                if score > threshold and results.names[int(class_id)] == 'plate':
                     cv2.rectangle(image, (int(x1), int(y1)), (int(x2), int(y2)), (0, 255, 0), 4)
                     plate_img = image[int(y1):int(y2), int(x1):int(x2)]
                     plate_category, plate_number, state = detect_text(plate_img)
                     print(f"Plate category: {plate_category}")
                     print(f"Plate Number: {plate_number}")
                     print(f"Plate Emireties: {state}")
-                print("-" * 50)  # separator for better readability
 
 
             plt.figure()
