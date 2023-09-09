@@ -34,100 +34,11 @@ Whether you're an enthusiast looking for a reliable license plate recognition so
 >   - When the model cannot detect a plate, it will clearly mention that no plate could be detected.
 
 ## Table of Contents
-- [System Flow](#system-flow)
 - [Dependencies](#dependencies)
+- [System Flow](#system-flow)
 - [Functional Overview](#functional-overview)
 - [User Guide](#user-guide)
 - [Updating the Repository](#updating-the-repository)
-
-
-
-## User Guide
-
-1. **Clone the Repository**
-   Use the following command to clone the repository to your local machine:
-      ```bash
-      git clone https://github.com/3bdul1ah/UAE-License-Plates-Detector.git
-
-3. **Navigate to the directory**
-   Change to the cloned directory using the command:
-      ```bash
-      cd UAE-License-Plate-Detector  
-
-3. **Setting up in an IDE**
-   After navigating to the project directory:
-   - Open the folder using your preferred Integrated Development Environment (IDE) such as PyCharm, VSCode, etc.
-   - Locate the `plate-detector.py`script within your IDE.
-   - Execute this script to initiate the license plate detection process.
-
-  > **Note:** Ensure you have all the necessary dependencies installed before running the script.
-   
-
-## Updating the Repository
-
-If you're collaborating on the UAE-License-Plates-Detector project, please adhere to the following guidelines to update the code in the repository.
-
-### 1. Navigate to the Project Directory
-
-Open your terminal and ensure you're in the project's directory. You can use the following command:
-
-```bash
-cd path/to/UAE-License-Plates-Detector
-```
-
-> **Note:** Replace `path/to` with the actual path to your local copy of the repository.
-
-### 2. Check the Status of Your Local Repository
-
-To view which files have changed, use the command:
-
-```bash
-git status
-```
-
-### 3. Stage Your Changes
-
-- To stage all changes, use:
-
-    ```bash
-    git add .
-    ```
-
-- To stage specific files, use:
-
-    ```bash
-    git add filename1 filename2
-    ```
-
-    > **Note:** Replace `filename1`, `filename2`, etc. with the actual names of the files you've changed.
-
-### 4. Commit Your Changes
-
-Commit your staged changes with a descriptive message using the following command:
-
-```bash
-git commit -m "Brief description of your changes"
-```
-
-### 5. Push Your Changes to GitHub
-
-Push your committed changes to the main repository with:
-
-```bash
-git push origin master
-```
-
-> **Note:** If you're working on a branch other than `master`, replace `master` with your branch's name.
-
-### 6. Stay Updated
-
-Always make sure you have the latest changes from the main repository before beginning your work to avoid conflicts. Use the command:
-
-```bash
-git pull origin master
-```
-
-Thank you for contributing to **UAE-License-Plates-Detector**!
 
 ## Dependencies
 
@@ -230,6 +141,94 @@ Thank you for contributing to **UAE-License-Plates-Detector**!
 > 4. Input image URLs when prompted.
 > 5. View the detected license plates and their details.
 > 6. All detected details will be saved in an Excel file.
+
+## User Guide
+
+1. **Clone the Repository**
+   Use the following command to clone the repository to your local machine:
+      ```bash
+      git clone https://github.com/3bdul1ah/UAE-License-Plates-Detector.git
+
+3. **Navigate to the directory**
+   Change to the cloned directory using the command:
+      ```bash
+      cd UAE-License-Plate-Detector  
+
+3. **Setting up in an IDE**
+   After navigating to the project directory:
+   - Open the folder using your preferred Integrated Development Environment (IDE) such as PyCharm, VSCode, etc.
+   - Locate the `plate-detector.py`script within your IDE.
+   - Execute this script to initiate the license plate detection process.
+
+  > **Note:** Ensure you have all the necessary dependencies installed before running the script.
+   
+
+## Updating the Repository
+
+If you're collaborating on the UAE-License-Plates-Detector project, please adhere to the following guidelines to update the code in the repository.
+
+### 1. Navigate to the Project Directory
+
+Open your terminal and ensure you're in the project's directory. You can use the following command:
+
+```bash
+cd path/to/UAE-License-Plates-Detector
+```
+
+> **Note:** Replace `path/to` with the actual path to your local copy of the repository.
+
+### 2. Check the Status of Your Local Repository
+
+To view which files have changed, use the command:
+
+```bash
+git status
+```
+
+### 3. Stage Your Changes
+
+- To stage all changes, use:
+
+    ```bash
+    git add .
+    ```
+
+- To stage specific files, use:
+
+    ```bash
+    git add filename1 filename2
+    ```
+
+    > **Note:** Replace `filename1`, `filename2`, etc. with the actual names of the files you've changed.
+
+### 4. Commit Your Changes
+
+Commit your staged changes with a descriptive message using the following command:
+
+```bash
+git commit -m "Brief description of your changes"
+```
+
+### 5. Push Your Changes to GitHub
+
+Push your committed changes to the main repository with:
+
+```bash
+git push origin master
+```
+
+> **Note:** If you're working on a branch other than `master`, replace `master` with your branch's name.
+
+### 6. Stay Updated
+
+Always make sure you have the latest changes from the main repository before beginning your work to avoid conflicts. Use the command:
+
+```bash
+git pull origin master
+```
+
+
+
 
 
 
