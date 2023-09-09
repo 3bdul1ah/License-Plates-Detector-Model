@@ -10,12 +10,11 @@
 
 ## Table of Contents
 - [Introduction](#introduction)
-- [Code Flowchart](#code-flowchart)
+- [System Flow](#system-flow)
 - [Dependencies](#dependencies)
 - [Functional Overview](#functional-overview)
 - [User Guide](#user-guide)
 - [Updating the Repository](#updating-the-repository)
-- [Future Enhancements](#future-enhancements) 
 
 
 ## Introduction
