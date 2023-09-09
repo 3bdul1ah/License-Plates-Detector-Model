@@ -145,9 +145,9 @@ If you're collaborating on the UAE-License-Plates-Detector project, please adher
 
 Open your terminal and ensure you're in the project's directory. You can use the following command:
 
-\```bash
+```bash
 cd path/to/UAE-License-Plates-Detector
-\```
+```
 
 > **Note:** Replace `path/to` with the actual path to your local copy of the repository.
 
@@ -155,23 +155,23 @@ cd path/to/UAE-License-Plates-Detector
 
 To view which files have changed, use the command:
 
-\```bash
+```bash
 git status
-\```
+```
 
 ### 3. Stage Your Changes
 
 - To stage all changes, use:
 
-    \```bash
+    ```bash
     git add .
-    \```
+    ```
 
 - To stage specific files, use:
 
-    \```bash
+    ```bash
     git add filename1 filename2
-    \```
+    ```
 
     > **Note:** Replace `filename1`, `filename2`, etc. with the actual names of the files you've changed.
 
@@ -179,17 +179,17 @@ git status
 
 Commit your staged changes with a descriptive message using the following command:
 
-\```bash
+```bash
 git commit -m "Brief description of your changes"
-\```
+```
 
 ### 5. Push Your Changes to GitHub
 
 Push your committed changes to the main repository with:
 
-\```bash
+```bash
 git push origin master
-\```
+```
 
 > **Note:** If you're working on a branch other than `master`, replace `master` with your branch's name.
 
@@ -197,11 +197,9 @@ git push origin master
 
 Always make sure you have the latest changes from the main repository before beginning your work to avoid conflicts. Use the command:
 
-\```bash
+```bash
 git pull origin master
-\```
-
----
+```
 
 Thank you for contributing to **UAE-License-Plates-Detector**!
 
