@@ -27,6 +27,7 @@ Whether you're an enthusiast looking for a reliable license plate recognition so
 
 
 ## User Guide
+
 1. **Clone the Repository**
    Use the following command to clone the repository to your local machine:
       ```bash
@@ -175,14 +176,15 @@ Thank you for contributing to **UAE-License-Plates-Detector**!
 
 ### END PROGRAM
 
-## Quick Start
-
+>> **Tips to avoid problems:**
 1. Ensure all dependencies are installed.
 2. Clone the repository.
-3. Run the main Python script.
+3. Run the `plate-detector.py` Python script.
 4. Input image URLs when prompted.
 5. View the detected license plates and their details.
 6. All detected details will be saved in an Excel file.
+
+
 
 ##  Future Enhancements
 
