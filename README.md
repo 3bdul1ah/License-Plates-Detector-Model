@@ -176,7 +176,7 @@ Thank you for contributing to **UAE-License-Plates-Detector**!
 
 ### END PROGRAM
 
->> **Tips to avoid problems:**
+> **Tips to avoid problems:**
 1. Ensure all dependencies are installed.
 2. Clone the repository.
 3. Run the `plate-detector.py` Python script.
