@@ -127,87 +127,82 @@ Thank you for contributing to **UAE-License-Plates-Detector**!
 
 ### Initialization
 
-1. **Program Initialization (Lines 1-3):**
-   - The program starts by importing essential libraries and initializing two crucial components: the Excel Database and the License Plate Detector.
-
-2. **Database Initialization (Lines 143-144):**
-   - An instance of the ExcelDatabase class is created to handle data storage. This database will store information extracted from license plates.
-
-3. **License Plate Detector Initialization (Line 145):**
-   - An instance of the LicensePlateDetector class is created, which loads a pre-trained YOLO model for object detection and sets a detection threshold.
-
-4. **License Plate Categories and States (Lines 37-59):**
-   - The program defines specific classes for license plate categories and state abbreviations, which will be used to interpret the detected objects.
+1. **Start Program (Lines 1-3):**
+   - The program begins by initializing two key components: the Excel Database and the License Plate Detector.
 
 ### Image Processing Loop
 
-5. **Image Processing Loop (Lines 146-152):**
-   - The program enters a loop designed to process multiple image URLs provided by the user. This loop continues until the user enters "exit" to terminate the program.
+2. **Loop for Processing Images (Lines 146-152):**
+   - The program enters a loop where it prompts the user to input image URLs for processing.
+   - This loop continues until the user enters "exit" to terminate the program.
 
-   - For each image URL:
+   - Inside the loop, the program performs the following steps for each provided image URL:
 
       - **Retrieve Image Data (Lines 106-110):**
-        - The program retrieves image data from the given URL using HTTP requests.
+        - The program retrieves image data from the given URL.
 
       - **Image Retrieval Check (Lines 108-109):**
-        - It checks whether the image retrieval was successful.
+        - If the image retrieval is successful:
 
          - **Convert Image Format (Lines 110-111):**
-           - If successful, the program converts the retrieved image data into the OpenCV format for further analysis.
+           - The program converts the retrieved image data into the OpenCV format.
 
          - **Get Image Dimensions (Line 112):**
-           - The height and width dimensions of the image are extracted to help with subsequent processing.
+           - The program extracts the height and width dimensions of the image.
 
         ### License Plate Detection
 
          - **Use YOLO Model (Line 113):**
-           - The YOLO model is employed to identify objects within the image, which may include license plates.
+           - The program employs the YOLO model to identify objects within the image.
 
          - **Filter and Sort Detected Objects (Lines 114-117):**
-           - Detected objects are filtered based on a specified score threshold to focus on high-confidence predictions. They are then sorted by their x-axis position for sequential analysis.
+           - Detected objects are filtered based on a specified score threshold.
+           - Objects are sorted based on their x-axis position for further analysis.
 
          #### Process Each Detected Object
 
-         - For each detected object:
+         For each detected object:
 
-           - **Check for License Plate (Lines 118-121):**
-             - The program determines if the object corresponds to a license plate based on the score threshold and class names.
+         - **Check for License Plate (Lines 118-121):**
+           - The program determines if the object corresponds to a license plate based on the score threshold.
 
-           - If it's a license plate:
+         - If it's a license plate:
+           - **Draw Rectangle Around Plate (Line 122):**
+             - A green rectangle is drawn around the detected license plate on the image.
 
-             - **Draw Rectangle Around Plate (Line 122):**
-               - A green rectangle is drawn around the detected license plate on the image to highlight it.
+           - **Crop Plate Region (Line 123):**
+             - The program crops the region containing the license plate from the image for further analysis.
 
-             - **Crop Plate Region (Line 123):**
-               - The program crops the region containing the license plate from the image for detailed analysis.
+            #### Extract Plate Information
 
-             #### Extract Plate Information
-
-             - **Plate Analysis (Lines 124-128):**
-               - The program analyzes the license plate image to extract three key pieces of information:
-                 - Plate category (e.g., private, commercial)
-                 - Plate number (alphanumeric)
-                 - State (e.g., Dubai, Abu Dhabi)
+            - **Plate Analysis (Lines 124-128):**
+              - The program analyzes the license plate image to extract three key pieces of information:
+                - Plate category
+                - Plate number
+                - State
 
            - **Print Plate Information (Lines 125-127):**
-             - Extracted plate category, plate number, and state are printed to the console for user visibility and verification.
+             - The extracted plate category, plate number, and state are printed to the console.
 
            - **Save Plate Data (Line 129):**
-             - The program saves the extracted plate data, including category, number, and state, to the Excel Database for future reference.
+             - The program saves the plate data (category, number, state) to the Excel Database for future reference.
 
          - **Display Processed Image (Lines 131-140):**
-           - The image with the drawn rectangle and extracted information is displayed to the user for visual confirmation.
+           - The image with the drawn rectangle and extracted information is displayed to the user.
 
-        - If image retrieval is unsuccessful:
-           - A message indicating image retrieval failure is printed (Lines 132-134).
+        - If image retrieval is not successful:
+           - The program prints a message indicating that image retrieval from the URL has failed (Lines 132-134).
+
+3. **End Loop (Line 145)**
 
 ### Program Cleanup and Exit
 
-6. **Cleanup and Exit (Lines 141-142):**
-   - After processing all images, the program proceeds with cleanup procedures. This includes releasing any resources acquired during image processing and closing the Excel Database to ensure data integrity.
+4. **Cleanup and Exit (Lines 141-142):**
+   - After processing all images, the program proceeds with cleanup procedures.
+   - This includes releasing resources and closing the Excel Database.
 
-7. **End Program (Lines 142-152)**
-   - The program concludes, and the user can exit the application.
+5. **End Program (Lines 142-152)**
+
 
 
 
