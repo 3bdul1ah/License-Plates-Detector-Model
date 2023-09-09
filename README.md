@@ -200,7 +200,7 @@ Thank you for contributing to **UAE-License-Plates-Detector**!
    - After processing all images, the program proceeds with cleanup procedures.
    - This includes releasing resources and closing the Excel Database.
 
-5. **End Program (Lines 142-152)**
+### 5. End Program (Lines 142-152)
 
 
 > **Tips to avoid problems:**
