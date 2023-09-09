@@ -16,21 +16,20 @@ Our software leverages the formidable capabilities of the Ultralytics YOLO model
 
 Whether you're an enthusiast looking for a reliable license plate recognition solution or a professional seeking robust software for larger systems, our tool is designed to impress and deliver. Dive in and discover our license plate detector!
 
-## License Plate Detection Model Update (2023-09-06)
-
-**1. Stability:** The system is now in a stable state.
-
-**2. Accuracy:** Its detection accuracy is outstanding, exceeding 90%. Failures are rare.
-
-**3. Output Details:** The model can discern and provide:
-   - Plate category ✅
-   - Plate number ✅
-   - Plate state ✅
-
-The model’s detection ability is parallel to human eyesight:
-  - If it recognizes a plate, it captures it with high precision.
-  - When the model cannot detect a plate, it will clearly mention that no plate could be detected.
-
+> **License Plate Detection Model Update (2023-09-06):**
+> 
+> - **Stability:** The system is now in a stable state.
+> 
+> - **Accuracy:** Its detection accuracy is outstanding, exceeding 90%. Failures are rare.
+> 
+> - **Output Details:** The model can discern and provide:
+>    - Plate category ✅
+>    - Plate number ✅
+>    - Plate state ✅
+> 
+> The model’s detection ability is parallel to human eyesight:
+>   - If it recognizes a plate, it captures it with high precision.
+>   - When the model cannot detect a plate, it will clearly mention that no plate could be detected.
 
 ## Table of Contents
 - [System Flow](#system-flow)
