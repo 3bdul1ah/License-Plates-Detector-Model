@@ -169,12 +169,12 @@ Thank you for contributing to **UAE-License-Plates-Detector**!
          - If it's a license plate:
            - **Draw Rectangle Around Plate (Line 122):**
              - A green rectangle is drawn around the detected license plate on the image.
-             
+
            - **Crop Plate Region (Line 123):**
              - The program crops the region containing the license plate from the image for further analysis.
-            
+
             #### Extract Plate Information
-            
+
             - **Plate Analysis (Lines 124-128):**
               - The program analyzes the license plate image to extract three key pieces of information:
                 - Plate category
@@ -193,14 +193,15 @@ Thank you for contributing to **UAE-License-Plates-Detector**!
         - If image retrieval is not successful:
            - The program prints a message indicating that image retrieval from the URL has failed (Lines 132-134).
 
-### 3. End Loop (Line 145)
- Program Cleanup and Exit 
+3. **End Loop (Line 145)**
 
-### 4. Cleanup and Exit (Lines 141-142):
+### Program Cleanup and Exit
+
+4. **Cleanup and Exit (Lines 141-142):**
    - After processing all images, the program proceeds with cleanup procedures.
    - This includes releasing resources and closing the Excel Database.
 
-### 5. End Program (Lines 142-152)
+5. **End Program (Lines 142-152)**
 
 
 > **Tips to avoid problems:**
