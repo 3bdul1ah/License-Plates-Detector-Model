@@ -150,7 +150,7 @@ Thank you for contributing to **UAE-License-Plates-Detector**!
          - **Get Image Dimensions (Line 112):**
            - The program extracts the height and width dimensions of the image.
 
-         ### License Plate Detection
+        ### License Plate Detection
 
          - **Use YOLO Model (Line 113):**
            - The program employs the YOLO model to identify objects within the image.
@@ -195,7 +195,7 @@ Thank you for contributing to **UAE-License-Plates-Detector**!
 
 3. **End Loop (Line 145)**
 
-## Program Cleanup and Exit
+### Program Cleanup and Exit
 
 4. **Cleanup and Exit (Lines 141-142):**
    - After processing all images, the program proceeds with cleanup procedures.
