@@ -8,16 +8,6 @@
 
 
 
-## Table of Contents
-- [Introduction](#introduction)
-- [System Flow](#system-flow)
-- [Dependencies](#dependencies)
-- [Functional Overview](#functional-overview)
-- [User Guide](#user-guide)
-- [Updating the Repository](#updating-the-repository)
-
-
-
 ## Introduction
 
 Welcome to the License Plate Detection Software, crafted by Abdullah Alshateri and Ahmed Balfiqah, third-year Electronic-Telecom Engineering students from UTM.
@@ -40,6 +30,15 @@ Whether you're an enthusiast looking for a reliable license plate recognition so
 The model’s detection ability is parallel to human eyesight:
   - If it recognizes a plate, it captures it with high precision.
   - When the model cannot detect a plate, it will clearly mention that no plate could be detected.
+
+
+
+## Table of Contents
+- [System Flow](#system-flow)
+- [Dependencies](#dependencies)
+- [Functional Overview](#functional-overview)
+- [User Guide](#user-guide)
+- [Updating the Repository](#updating-the-repository)
 
 
 
