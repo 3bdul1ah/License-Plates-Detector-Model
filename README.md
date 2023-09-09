@@ -48,37 +48,37 @@ Whether you're an enthusiast looking for a reliable license plate recognition so
 >   pip install os
 >   ```
 
-> - `ultralytics`: Used for YOLO model integrations.
+> - ### `ultralytics`: Used for YOLO model integrations.
 >   ```
 >   pip install ultralytics
 >   ```
 
-> - `cv2`: Image and video processing tasks.
+> - ### `cv2`: Image and video processing tasks.
 >   ```
 >   pip install opencv-python
 >   ```
 
-> - `requests`: To fetch images from URLs.
+> - ### `requests`: To fetch images from URLs.
 >   ```
 >   pip install requests
 >   ```
 
-> - `numpy`: Numerical operations.
+> - ### `numpy`: Numerical operations.
 >   ```
 >   pip install numpy
 >   ```
 
-> - `io`: Core I/O functionalities.
+> - ### `io`: Core I/O functionalities.
 >   ```
 >   pip install io
 >   ```
 
-> - `matplotlib`: Display images.
+> - ### `matplotlib`: Display images.
 >   ```
 >   pip install matplotlib
 >   ```
 
-> - `pandas`: Manage Excel operations effectively.
+> - ### `pandas`: Manage Excel operations effectively.
 >   ```
 >   pip install pandas
 >   ```
