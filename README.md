@@ -125,8 +125,6 @@ Thank you for contributing to **UAE-License-Plates-Detector**!
 
 ## System Flow
 
-This README outlines the comprehensive system flow of a Python program for license plate detection and database integration.
-
 ### Initialization
 
 1. **Program Initialization (Lines 1-3):**
