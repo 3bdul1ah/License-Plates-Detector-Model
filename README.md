@@ -123,39 +123,39 @@ Thank you for contributing to **UAE-License-Plates-Detector**!
 - `matplotlib`: Display images.
 - `pandas`: Manage Excel operations effectively.
 
-## System Flow
+# System Flow
 
 ## Initialization
 
-1. **Start Program:**
+1. **Start Program (Lines 1-3):**
    - The program begins by initializing two key components: the Excel Database and the License Plate Detector.
 
 ## Image Processing Loop
 
-2. **Loop for Processing Images:**
+2. **Loop for Processing Images (Lines 146-152):**
    - The program enters a loop where it prompts the user to input image URLs for processing.
    - This loop continues until the user enters "exit" to terminate the program.
 
    - Inside the loop, the program performs the following steps for each provided image URL:
 
-      - **Retrieve Image Data:**
+      - **Retrieve Image Data (Lines 106-110):**
         - The program retrieves image data from the given URL.
 
-      - **Image Retrieval Check:**
+      - **Image Retrieval Check (Lines 108-109):**
         - If the image retrieval is successful:
 
-         - **Convert Image Format:**
+         - **Convert Image Format (Lines 110-111):**
            - The program converts the retrieved image data into the OpenCV format.
-         
-         - **Get Image Dimensions:**
+
+         - **Get Image Dimensions (Line 112):**
            - The program extracts the height and width dimensions of the image.
 
          ### License Plate Detection
 
-         - **Use YOLO Model:**
+         - **Use YOLO Model (Line 113):**
            - The program employs the YOLO model to identify objects within the image.
 
-         - **Filter and Sort Detected Objects:**
+         - **Filter and Sort Detected Objects (Lines 114-117):**
            - Detected objects are filtered based on a specified score threshold.
            - Objects are sorted based on their x-axis position for further analysis.
 
@@ -163,48 +163,47 @@ Thank you for contributing to **UAE-License-Plates-Detector**!
 
          For each detected object:
 
-         - **Check for License Plate:**
+         - **Check for License Plate (Lines 118-121):**
            - The program determines if the object corresponds to a license plate based on the score threshold.
 
          - If it's a license plate:
-           - **Draw Rectangle Around Plate:**
+           - **Draw Rectangle Around Plate (Line 122):**
              - A green rectangle is drawn around the detected license plate on the image.
              
-           - **Crop Plate Region:**
+           - **Crop Plate Region (Line 123):**
              - The program crops the region containing the license plate from the image for further analysis.
             
             #### Extract Plate Information
             
-            - **Plate Analysis:**
+            - **Plate Analysis (Lines 124-128):**
               - The program analyzes the license plate image to extract three key pieces of information:
                 - Plate category
                 - Plate number
                 - State
 
-           - **Print Plate Information:**
+           - **Print Plate Information (Lines 125-127):**
              - The extracted plate category, plate number, and state are printed to the console.
 
-           - **Save Plate Data:**
+           - **Save Plate Data (Line 129):**
              - The program saves the plate data (category, number, state) to the Excel Database for future reference.
 
-         - **Display Processed Image:**
+         - **Display Processed Image (Lines 131-140):**
            - The image with the drawn rectangle and extracted information is displayed to the user.
 
         - If image retrieval is not successful:
-           - The program prints a message indicating that image retrieval from the URL has failed.
+           - The program prints a message indicating that image retrieval from the URL has failed (Lines 132-134).
 
-3. **End Loop**
+3. **End Loop (Line 145)**
 
 ## Program Cleanup and Exit
 
-4. **Cleanup and Exit:**
+4. **Cleanup and Exit (Lines 141-142):**
    - After processing all images, the program proceeds with cleanup procedures.
    - This includes releasing resources and closing the Excel Database.
 
-5. **End Program**
+5. **End Program (Lines 142-152)**
 
 
-### END PROGRAM
 
 > **Tips to avoid problems:**
 > 1. Ensure all dependencies are installed.
