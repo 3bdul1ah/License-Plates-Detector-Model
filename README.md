@@ -123,14 +123,14 @@ Thank you for contributing to **UAE-License-Plates-Detector**!
 - `matplotlib`: Display images.
 - `pandas`: Manage Excel operations effectively.
 
-# System Flow
+## System Flow
 
-## Initialization
+### Initialization
 
 1. **Start Program (Lines 1-3):**
    - The program begins by initializing two key components: the Excel Database and the License Plate Detector.
 
-## Image Processing Loop
+### Image Processing Loop
 
 2. **Loop for Processing Images (Lines 146-152):**
    - The program enters a loop where it prompts the user to input image URLs for processing.
