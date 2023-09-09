@@ -15,7 +15,8 @@
 - [Dependencies](#dependencies)
 - [Functional Overview](#functional-overview)
 - [User Guide](#user-guide)
-- [Future Enhancements](#future-enhancements)
+- [Updating the Repository](#updating-the-repository)
+- [Future Enhancements](#future-enhancements) 
 
 
 ## Introduction
@@ -135,6 +136,77 @@ Ensure the following Python libraries are installed for optimal operation of the
 3. **Setting up in an IDE**
     Once inside the project directory, open it with your preferred development environment, be it PyCharm, VSCode, or another editor. 
     File to Execute: Locate the `plate-detector.py` script in your editor. Execute this script to start the license plate detection process.
+
+## Updating the Repository
+
+If you're collaborating on the UAE-License-Plates-Detector project, please adhere to the following guidelines to update the code in the repository.
+
+### 1. Navigate to the Project Directory
+
+Open your terminal and ensure you're in the project's directory. You can use the following command:
+
+\```bash
+cd path/to/UAE-License-Plates-Detector
+\```
+
+> **Note:** Replace `path/to` with the actual path to your local copy of the repository.
+
+### 2. Check the Status of Your Local Repository
+
+To view which files have changed, use the command:
+
+\```bash
+git status
+\```
+
+### 3. Stage Your Changes
+
+- To stage all changes, use:
+
+    \```bash
+    git add .
+    \```
+
+- To stage specific files, use:
+
+    \```bash
+    git add filename1 filename2
+    \```
+
+    > **Note:** Replace `filename1`, `filename2`, etc. with the actual names of the files you've changed.
+
+### 4. Commit Your Changes
+
+Commit your staged changes with a descriptive message using the following command:
+
+\```bash
+git commit -m "Brief description of your changes"
+\```
+
+### 5. Push Your Changes to GitHub
+
+Push your committed changes to the main repository with:
+
+\```bash
+git push origin master
+\```
+
+> **Note:** If you're working on a branch other than `master`, replace `master` with your branch's name.
+
+### 6. Stay Updated
+
+Always make sure you have the latest changes from the main repository before beginning your work to avoid conflicts. Use the command:
+
+\```bash
+git pull origin master
+\```
+
+---
+
+Thank you for contributing to **UAE-License-Plates-Detector**!
+
+
+
 
 
 ##  Future Enhancements
