@@ -31,54 +31,11 @@ Whether you're an enthusiast looking for a reliable license plate recognition so
 >   - When the model cannot detect a plate, it will clearly mention that no plate could be detected.
 
 ## Table of Contents
-- [Dependencies](#dependencies)
 - [System Flow](#system-flow)
-- [Functional Overview](#functional-overview)
+- [Dependencies](#dependencies)
 - [User Guide](#user-guide)
 - [Updating the Repository](#updating-the-repository)
 
-## Dependencies
-**Before running this project, make sure to install the following Python dependencies:**
-
-> - ### `os`: For OS-level operations.
->   ```
->   pip install os
->   ```
-
-> - ### `ultralytics`: Used for YOLO model integrations.
->   ```
->   pip install ultralytics
->   ```
-
-> - ### `cv2`: Image and video processing tasks.
->   ```
->   pip install opencv-python
->   ```
-
-> - ### `requests`: To fetch images from URLs.
->   ```
->   pip install requests
->   ```
-
-> - ### `numpy`: Numerical operations.
->   ```
->   pip install numpy
->   ```
-
-> - ### `io`: Core I/O functionalities.
->   ```
->   pip install io
->   ```
-
-> - ### `matplotlib`: Display images.
->   ```
->   pip install matplotlib
->   ```
-
-> - ### `pandas`: Manage Excel operations effectively.
->   ```
->   pip install pandas
->   ```
 
 ## System Flow
 
@@ -170,6 +127,50 @@ Whether you're an enthusiast looking for a reliable license plate recognition so
 > 4. Input image URLs when prompted.
 > 5. View the detected license plates and their details.
 > 6. All detected details will be saved in an Excel file.
+
+
+## Dependencies
+**Before running this project, make sure to install the following Python dependencies:**
+
+> - ### `os`: For OS-level operations.
+>   ```
+>   pip install os
+>   ```
+
+> - ### `ultralytics`: Used for YOLO model integrations.
+>   ```
+>   pip install ultralytics
+>   ```
+
+> - ### `cv2`: Image and video processing tasks.
+>   ```
+>   pip install opencv-python
+>   ```
+
+> - ### `requests`: To fetch images from URLs.
+>   ```
+>   pip install requests
+>   ```
+
+> - ### `numpy`: Numerical operations.
+>   ```
+>   pip install numpy
+>   ```
+
+> - ### `io`: Core I/O functionalities.
+>   ```
+>   pip install io
+>   ```
+
+> - ### `matplotlib`: Display images.
+>   ```
+>   pip install matplotlib
+>   ```
+
+> - ### `pandas`: Manage Excel operations effectively.
+>   ```
+>   pip install pandas
+>   ```
 
 ## User Guide
 
