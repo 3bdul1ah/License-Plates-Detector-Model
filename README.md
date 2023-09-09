@@ -10,19 +10,19 @@
 
 ## Introduction
 
-Welcome to the License Plate Detection Software, crafted by Abdullah Alshateri and Ahmed Balfiqah, third-year Electronic-Telecom Engineering students from UTM.
+Welcome to the License Plate Detection Software, meticulously crafted by Abdullah Alshateri and Ahmed Balfiqah, both third-year Electronic-Telecom Engineering students at UTM.
 
-Harnessing the raw power of the Ultralytics YOLO model, our software can detect license plates in split-second timing using the ESP32-CAM. But it doesn't stop there! With advanced machine learning algorithms, the software dives deep into each detection, deciphering even the tiniest nuances of a license plate. What’s more, it seamlessly integrates these detections into an Excel database, ensuring that data archival is not just efficient but also organized.
+Our software leverages the formidable capabilities of the Ultralytics YOLO model to deliver lightning-fast license plate detection using the ESP32-CAM. But we don't stop at mere detection! With advanced machine learning algorithms, the software delves deep into each detection, deciphering even the tiniest nuances of a license plate. Moreover, it seamlessly integrates these detections into an Excel database, ensuring that data archival is not just efficient but also organized.
 
 Whether you're an enthusiast looking for a reliable license plate recognition solution or a professional seeking robust software for larger systems, our tool is designed to impress and deliver. Dive in and discover our license plate detector!
 
-**License Plate Detection Model Update (2023-09-06):**
+## License Plate Detection Model Update (2023-09-06)
 
-1. **Stability:** The system is now in a stable state.
+**1. Stability:** The system is now in a stable state.
 
-2. **Accuracy:** Its detection accuracy is outstanding, exceeding 90%. Failures are rare.
+**2. Accuracy:** Its detection accuracy is outstanding, exceeding 90%. Failures are rare.
 
-3. **Output Details:** The model can discern and provide:
+**3. Output Details:** The model can discern and provide:
    - Plate category ✅
    - Plate number ✅
    - Plate state ✅
@@ -30,7 +30,6 @@ Whether you're an enthusiast looking for a reliable license plate recognition so
 The model’s detection ability is parallel to human eyesight:
   - If it recognizes a plate, it captures it with high precision.
   - When the model cannot detect a plate, it will clearly mention that no plate could be detected.
-
 
 
 ## Table of Contents
