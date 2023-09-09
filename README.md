@@ -43,7 +43,7 @@ Whether you're an enthusiast looking for a reliable license plate recognition so
    - Locate the `plate-detector.py`script within your IDE.
    - Execute this script to initiate the license plate detection process.
 
-   Note: Ensure you have all the necessary dependencies installed before running the script.
+  > **Note:** Ensure you have all the necessary dependencies installed before running the script.
    
 
 ## Updating the Repository
