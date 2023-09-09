@@ -14,7 +14,7 @@
 
 Welcome to the License Plate Detection Software, meticulously crafted by **Abdullah Alshateri** and **Ahmed Balfiqah**, both third-year Electronic-Telecom Engineering students at UTM, during their internship in Smart Navigation System in the UAE.
 
-Our software leverages the formidable capabilities of the Ultralytics YOLO model to deliver lightning-fast license plate detection using the ESP32-CAM. But we don't stop at mere detection! With advanced machine learning algorithms, the software delves deep into each detection, deciphering even the tiniest nuances of a license plate. Moreover, it seamlessly integrates these detections into an Excel database, ensuring that data archival is not just efficient but also organized.
+Our software leverages the formidable capabilities of the Ultralytics **YOLOv8 model** to deliver lightning-fast license plate detection using the ESP32-CAM. But we don't stop at mere detection! With advanced **machine learning algorithms**, the software delves deep into each detection, deciphering even the tiniest nuances of a license plate. Moreover, it seamlessly integrates these detections into an Excel database, ensuring that data archival is not just efficient but also organized.
 
 Whether you're an enthusiast looking for a reliable license plate recognition solution or a professional seeking robust software for larger systems, our tool is designed to impress and deliver. Dive in and discover our license plate detector!
 
