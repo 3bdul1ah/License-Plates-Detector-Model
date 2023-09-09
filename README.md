@@ -27,17 +27,24 @@ Whether you're an enthusiast looking for a reliable license plate recognition so
 
 
 ## User Guide
-1. **Clone the repo**
+1. **Clone the Repository**
+   Use the following command to clone the repository to your local machine:
       ```bash
       git clone https://github.com/3bdul1ah/UAE-License-Plates-Detector.git
 
 3. **Navigate to the directory**
+   Change to the cloned directory using the command:
       ```bash
       cd UAE-License-Plate-Detector  
 
 3. **Setting up in an IDE**
-    Once inside the project directory, open it with your preferred development environment, be it PyCharm, VSCode, or another editor. 
-    File to Execute: Locate the `plate-detector.py` script in your editor. Execute this script to start the license plate detection process.
+   After navigating to the project directory:
+   - Open the folder using your preferred Integrated Development Environment (IDE) such as PyCharm, VSCode, etc.
+   - Locate the `plate-detector.py`script within your IDE.
+   - Execute this script to initiate the license plate detection process.
+
+   Note: Ensure you have all the necessary dependencies installed before running the script.
+   
 
 ## Updating the Repository
 
