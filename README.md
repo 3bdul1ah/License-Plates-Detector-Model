@@ -125,53 +125,188 @@ Thank you for contributing to **UAE-License-Plates-Detector**!
 
 ## System Flow
 
-### START PROGRAM
+###START PROGRAM
+|
+|---[Initialization]
+|   |
+|   |--- Load Essential Libraries: cv2, numpy, ultralytics, requests, io, matplotlib, pandas
+|   |    |
+|   |    |--- Import required Python libraries.
+|   |    |
+|   |    |--- Initialize OpenCV (cv2) for image processing.
+|   |    |
+|   |    |--- Import Ultralytics for YOLO model integration.
+|   |    |
+|   |    |--- Import numpy for numerical operations.
+|   |    |
+|   |    |--- Import requests for fetching images via HTTP.
+|   |    |
+|   |    |--- Import io for core I/O operations.
+|   |    |
+|   |    |--- Import matplotlib for plotting and visualization.
+|   |    |
+|   |    |--- Import pandas for Excel database operations.
+|   |
+|   |--- Set Global Variables: model_path, db, threshold, specific_classes, state_classes
+|   |    |
+|   |    |--- Set the path for the YOLO model weights (model_path).
+|   |    |
+|   |    |--- Create an instance of the ExcelDatabase class (db).
+|   |    |
+|   |    |--- Set a confidence threshold for object detection (threshold).
+|   |    |
+|   |    |--- Define specific_classes (characters for license plates).
+|   |    |
+|   |    |--- Define state_classes (mapping class labels to state names).
+|   |
+|   |--- Configure YOLO Model: Load YOLO model with model_path
+|        |
+|        |--- Load YOLO model using Ultralytics with the specified model_path.
+|        |
+|        |--- Initialize the YOLO model for object detection.
+|
+|---[Main Execution Loop]
+|   |
+|   |--- WHILE True  # Loop to get multiple image URLs
+|   |    |
+|   |    |--- Get image_url from the user.
+|   |    |
+|   |    |--- IF image_url is "exit" THEN BREAK the loop.
+|   |    |
+|   |    |--- Call process_image(image_url) to process the image.
+|   |    |
+|   |    |--- IF processed_image is not None
+|   |    |    |
+|   |    |    |--- Display the processed image using display_image(processed_image).
+|   |
+|   |--- [End of Main Loop]
+|
+|---[ExcelDatabase Class]
+|   |
+|   |--- INIT(filename='plates_data.xlsx'): Initialize ExcelDatabase instance with a filename.
+|   |    |
+|   |    |--- Set the filename for the Excel database (default is 'plates_data.xlsx').
+|   |
+|   |--- METHOD save(plate_data): Save plate data to Excel database.
+|        |
+|        |--- IF the Excel file does not exist
+|        |    |
+|        |    |--- Create a new Excel file with columns: "Plate Category", "Plate Number", "State", "Image URL".
+|        |
+|        |--- Read the existing Excel file.
+|        |
+|        |--- Create a new data frame (new_data) with the plate data.
+|        |
+|        |--- Concatenate the new data frame with the existing data frame.
+|        |
+|        |--- Save the updated data frame to the Excel file.
+|
+|---[LicensePlateDetector Class]
+|   |
+|   |--- INIT(model_path, db): Initialize LicensePlateDetector instance.
+|   |    |
+|   |    |--- Load YOLO model with the specified model_path.
+|   |    |
+|   |    |--- Set the confidence threshold for object detection.
+|   |    |
+|   |    |--- Initialize the ExcelDatabase instance (db).
+|   |
+|   |--- METHOD detect_text(image, plate_category=None): Detect text (plate details) in the image.
+|   |    |
+|   |    |--- IF plate_category is None, initialize empty lists for plate number and category.
+|   |    |
+|   |    |--- Set the default state_name to "couldn't be detected."
+|   |    |
+|   |    |--- Initialize plate_string and category lists.
+|   |    |
+|   |    |--- Get image dimensions (H, W).
+|   |    |
+|   |    |--- Perform object detection on the image using the YOLO model.
+|   |    |
+|   |    |--- Sort the detection results by the x-axis position.
+|   |    |
+|   |    |--- Iterate through sorted results:
+|   |    |    |
+|   |    |    |--- IF the class name is in state_classes:
+|   |    |    |    |
+|   |    |    |    |--- Update state_name with the corresponding state name.
+|   |    |
+|   |    |--- IF state_name is 'Sharjah' or 'Abu Dhabi'
+|   |    |    |
+|   |    |    |--- Iterate through sorted results:
+|   |    |    |    |
+|   |    |    |    |--- IF score > threshold and class name in specific_classes
+|   |    |    |    |    |
+|   |    |    |    |    |--- IF (y2 <= H // 2) or (x2 <= W // 5)
+|   |    |    |    |    |    |
+|   |    |    |    |    |    |--- Append class name to category.
+|   |    |    |    |    |    |
+|   |    |    |    |    |--- ELSE
+|   |    |    |    |    |    |
+|   |    |    |    |    |    |--- Append class name to plate_number.
+|   |    |    |    |    |
+|   |    |    |    |    |--- Concatenate category and plate_number to form plate_category.
+|   |    |
+|   |    |--- ELSE (state_name is not 'Sharjah' or 'Abu Dhabi')
+|   |    |    |
+|   |    |    |--- Iterate through sorted results:
+|   |    |    |    |
+|   |    |    |    |--- IF score > threshold and class name in specific_classes
+|   |    |    |    |    |
+|   |    |    |    |    |--- IF class name is alphabetic
+|   |    |    |    |    |    |
+|   |    |    |    |    |    |--- Append class name to category.
+|   |    |    |    |    |    |
+|   |    |    |    |    |--- ELSE IF class name is a digit
+|   |    |    |    |    |    |
+|   |    |    |    |    |    |--- Append class name to plate_number.
+|   |    |    |    |    |
+|   |    |    |    |    |--- Concatenate category and plate_number to form plate_category.
+|   |    |
+|   |    |--- RETURN plate_category, plate_number, state_name.
+|   |
+|   |--- METHOD process_image(image_url): Process an image from a URL.
+|   |    |
+|   |    |--- Fetch the image data from the provided URL using requests.
+|   |    |
+|   |    |--- IF the response status code is 200 (success)
+|   |    |    |
+|   |    |    |--- Decode the image data and create an OpenCV image.
+|   |    |    |
+|   |    |    |--- Get image dimensions (H, W).
+|   |    |    |
+|   |    |    |--- Perform object detection using the YOLO model.
+|   |    |    |
+|   |    |    |--- Sort the detection results by the x-axis position.
+|   |    |    |
+|   |    |    |--- Iterate through sorted results:
+|   |    |    |    |
+|   |    |    |    |--- IF score > threshold and class name is 'plate'
+|   |    |    |    |    |
+|   |    |    |    |    |--- Draw a green bounding box around the detected plate.
+|   |    |    |    |    |
+|   |    |    |    |    |--- Extract the plate image.
+|   |    |    |    |    |
+|   |    |    |    |    |--- Call detect_text() to extract plate details (plate_category, plate_number, state).
+|   |    |    |    |    |
+|   |    |    |    |    |--- PRINT plate details.
+|   |    |    |    |    |
+|   |    |    |    |    |--- Save plate details to the Excel database (db).
+|   |    |    |
+|   |    |--- ELSE (response status code is not 200)
+|   |    |    |
+|   |    |    |--- PRINT "Failed to retrieve image from URL: {image_url}".
+|   |    |
+|   |    |--- RETURN the processed image.
+|   |
+|   |--- METHOD display_image(processed_image): Display an image using Matplotlib.
+|        |
+|        |--- Create a Matplotlib figure.
+|        |
+|        |--- Display the processed image in the figure.
+|        |
+|        |--- SHOW the Matplotlib figure.
 
-#### 1. IMPORT Necessary Libraries
-
-#### 2. DEFINE CLASS ExcelDatabase:
-- **INIT(filename)**:
-    - SET filename
-- **METHOD save(plate_data)**:
-    - IF filename does not exist:
-        - CREATE new Excel file with columns
-    - READ Excel file
-    - APPEND new plate data to the Excel file
-    - SAVE Excel file
-
-#### 3. DEFINE CLASS LicensePlateDetector:
-- **INIT(model_path, db)**:
-    - LOAD YOLO model
-    - SET confidence threshold
-    - SET specific classes (characters for license plates)
-    - SET state classes (to map class labels to actual state names)
-- **METHOD detect_text(image)**:
-    - INIT empty lists for plate number and category
-    - SET default state_name to "couldn't be detected"
-    - PARSE the image to detect state and characters
-    - RETURN plate_category, plate_string, state_name
-- **METHOD process_image(image_url)**:
-    - FETCH the image using the provided URL
-    - PROCESS the image through the YOLO model
-    - LOOP through detected objects:
-        - IF detected object is a plate:
-            - EXTRACT plate details
-            - PRINT plate details
-            - SAVE plate details to Excel database
-    - RETURN the processed image
-- **METHOD display_image(processed_image)**:
-    - DISPLAY the image using matplotlib
-
-#### 4. MAIN EXECUTION:
-- SET path for the YOLO model
-- CREATE instance of ExcelDatabase
-- CREATE instance of LicensePlateDetector
-- LOOP continuously:
-    - GET image_url from user
-    - IF image_url is "exit":
-        - BREAK
-    - PROCESS the image through LicensePlateDetector
-    - DISPLAY the processed image
 
 ### END PROGRAM
 
