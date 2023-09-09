@@ -7,9 +7,6 @@
 
 
 
-
-# License Plate Detection Software
-
 ## Introduction
 
 Welcome to the License Plate Detection Software, meticulously crafted by **Abdullah Alshateri** and **Ahmed Balfiqah**, both third-year Electronic-Telecom Engineering students at UTM, during their internship in Smart Navigation System in the UAE.
