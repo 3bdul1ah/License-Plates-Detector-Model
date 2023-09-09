@@ -125,12 +125,12 @@ Thank you for contributing to **UAE-License-Plates-Detector**!
 
 ## System Flow
 
-### Initialization
+### A - Initialization
 
 1. **Start Program (Lines 1-3):**
    - The program begins by initializing two key components: the Excel Database and the License Plate Detector.
 
-### Image Processing Loop
+### B - Image Processing Loop
 
 2. **Loop for Processing Images (Lines 146-152):**
    - The program enters a loop where it prompts the user to input image URLs for processing.
@@ -193,16 +193,14 @@ Thank you for contributing to **UAE-License-Plates-Detector**!
         - If image retrieval is not successful:
            - The program prints a message indicating that image retrieval from the URL has failed (Lines 132-134).
 
-3. **End Loop (Line 145)**
+### 3. C - End Loop (Line 145)
+ Program Cleanup and Exit 
 
-### Program Cleanup and Exit
-
-4. **Cleanup and Exit (Lines 141-142):**
+### 4. Cleanup and Exit (Lines 141-142):
    - After processing all images, the program proceeds with cleanup procedures.
    - This includes releasing resources and closing the Excel Database.
 
 5. **End Program (Lines 142-152)**
-
 
 
 > **Tips to avoid problems:**
