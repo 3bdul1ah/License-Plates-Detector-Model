@@ -112,104 +112,77 @@ git pull origin master
 
 Thank you for contributing to **UAE-License-Plates-Detector**!
 
-## Code Flowchart
-
-### 1. Initialization
-- **Load Essential Libraries**: This involves `cv2` for image processing, `numpy` for numerical operations, and more.
-  
-- **Set Global Variables**: These could be paths, default thresholds, etc.
-
-- **Configure YOLO Model**: Load model weights and set model configurations.
-
-### 2. Image Pre-processing
-- **Load Image**: Utilize `cv2` or similar libraries to read the image.
-
-- **Image Rescaling**: Ensure the image meets the size expectations of YOLO.
-
-- **Image Normalization**: Transform pixel values for optimal model interpretation.
-
-- **Image Augmentation**: Apply transformations, if needed, to enhance model accuracy.
-
-### 3. License Plate Detection
-- **Invoke YOLO Model**: Process the image through the YOLO neural network.
-
-- **Post-process Outputs**: Filter out detections below a confidence threshold.
-
-- **Draw Bounding Boxes**: Utilize the coordinates to illustrate detected regions.
-
-### 4. License Plate Details Extraction
-- **Crop License Plate**: Extract the specific region of interest.
-
-- **Apply OCR**: Tools like Tesseract help in translating image to text.
-
-- **Clean and Validate Text**: Ensure the extracted text matches license plate conventions.
-
-### 5. Data Storage
-- **Excel Initialization**: Set up Excel sheets or load existing ones.
-
-- **Data Entry**: Input the detected data in rows/columns.
-
-- **Auto-save Mechanism**: Periodically save data to prevent loss.
-
-### 6. User Interface & Feedback
-- **GUI Initialization**: If using a GUI, load up the interface.
-
-- **Display Detected Image**: Provide a visual feedback on what's detected.
-
-- **Interactive Features**: Allow users to manually adjust or confirm detections.
-
-### 7. Cleanup & Finalization
-- **Backup Data**: Periodically backup Excel data for safety.
-
-- **Log Activities**: Maintain a log for traceability and debugging.
-
-- **Close Operations**: Tidy up by closing files, releasing memory, and perhaps providing a summary report.
-
-### 8. Exception Handling
-- **Custom Error Messages**: For common issues, provide guidance.
-
-- **Error Logging**: For unseen errors, log them for future debugging.
-
-- **Graceful Exit**: Even in error states, ensure the program closes neatly without causing other disruptions.
-
-### 9. Additional Features
-- **Updates & Upgrades**: Regularly check for model upgrades or dataset updates.
-
-- **User Customizations**: Allow users to set preferences, like confidence thresholds or specific regions to scan.
-
-- **Extendable Modules**: Design the code such that future features or improvements can be plugged in without major overhauls.
-
-
 ## Dependencies
-Ensure the following Python libraries are installed for optimal operation of the License Plate Detection tool:
 
-- `os` Built-in module for OS-level operations.
-- `ultralytics` Key for YOLO model integrations.
-- `cv2` Utilized for image and video processing tasks.
-- `requests` Enables making HTTP requests to fetch images.
-- `numpy` Essential for numerical operations.
-- `io` Supports core I/O functionalities.
-- `matplotlib` For plotting and visualizations.
-- `pandas` Handles Excel database operations effectively.
+- `os`: For OS-level operations.
+- `ultralytics`: Used for YOLO model integrations.
+- `cv2`: Image and video processing tasks.
+- `requests`: To fetch images from URLs.
+- `numpy`: Numerical operations.
+- `io`: Core I/O functionalities.
+- `matplotlib`: Display images.
+- `pandas`: Manage Excel operations effectively.
 
-## Functional Overview 
+## System Flow
 
-### 1. **ExcelDatabase Class**: 
-- **Purpose**: This class is responsible for managing the storage of license plate data in an Excel format. 
-- **Database Creation**: It checks for the existence of the database file named 'plates_data.xlsx'. If not found, it intelligently initializes a new database with the required columns.
-- **Data Entry**: Offers a `save` method that facilitates the addition of new license plate records to the database.
+### START PROGRAM
 
-### 2. **LicensePlateDetector Class**: 
-- **Core Operation**: At the heart of this tool, this class utilizes the power of the Ultralytics YOLO model to detect license plates in given images.
-- **Data Extraction**: Post-detection, it not only identifies the license plate's region but also deciphers the textual details inscribed, such as the plate number and state.
-- **Data Categorization**: Has an intrinsic capability to differentiate between various license plate formats, especially recognizing unique formats from states like 'Sharjah' and 'Abu Dhabi'.
-- **Visualization**: An added functionality where the detected license plate on the image can be visualized with a bounding box.
+#### 1. IMPORT Necessary Libraries
 
-### 3. **Main Workflow**: 
-- **Interactive Input**: The script operates in an interactive mode, prompting users to input image URLs.
-- **Processing Chain**: For each provided URL, the image undergoes a series of processes: fetching the image, detecting the license plate, deciphering its details, storing the data in the Excel database, and finally, visualizing the detection.
-- **Exit Strategy**: The loop continues to process images until the user decides to terminate the session by inputting 'exit'.
+#### 2. DEFINE CLASS ExcelDatabase:
+- **INIT(filename)**:
+    - SET filename
+- **METHOD save(plate_data)**:
+    - IF filename does not exist:
+        - CREATE new Excel file with columns
+    - READ Excel file
+    - APPEND new plate data to the Excel file
+    - SAVE Excel file
 
+#### 3. DEFINE CLASS LicensePlateDetector:
+- **INIT(model_path, db)**:
+    - LOAD YOLO model
+    - SET confidence threshold
+    - SET specific classes (characters for license plates)
+    - SET state classes (to map class labels to actual state names)
+- **METHOD detect_text(image)**:
+    - INIT empty lists for plate number and category
+    - SET default state_name to "couldn't be detected"
+    - PARSE the image to detect state and characters
+    - RETURN plate_category, plate_string, state_name
+- **METHOD process_image(image_url)**:
+    - FETCH the image using the provided URL
+    - PROCESS the image through the YOLO model
+    - LOOP through detected objects:
+        - IF detected object is a plate:
+            - EXTRACT plate details
+            - PRINT plate details
+            - SAVE plate details to Excel database
+    - RETURN the processed image
+- **METHOD display_image(processed_image)**:
+    - DISPLAY the image using matplotlib
+
+#### 4. MAIN EXECUTION:
+- SET path for the YOLO model
+- CREATE instance of ExcelDatabase
+- CREATE instance of LicensePlateDetector
+- LOOP continuously:
+    - GET image_url from user
+    - IF image_url is "exit":
+        - BREAK
+    - PROCESS the image through LicensePlateDetector
+    - DISPLAY the processed image
+
+### END PROGRAM
+
+## Quick Start
+
+1. Ensure all dependencies are installed.
+2. Clone the repository.
+3. Run the main Python script.
+4. Input image URLs when prompted.
+5. View the detected license plates and their details.
+6. All detected details will be saved in an Excel file.
 
 ##  Future Enhancements
 
