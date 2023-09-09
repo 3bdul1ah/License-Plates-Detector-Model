@@ -43,7 +43,7 @@ Whether you're an enthusiast looking for a reliable license plate recognition so
 ## Dependencies
 **Before running this project, make sure to install the following Python dependencies:**
 
-> - **`os`: For OS-level operations.**
+> - ### `os`: For OS-level operations.
 >   ```
 >   pip install os
 >   ```
