@@ -176,72 +176,71 @@ Thank you for contributing to **UAE-License-Plates-Detector**!
 
 ### END PROGRAM
 > **Extra info:**
-## Code Flowchart
 
-### 1. Initialization
-- **Load Essential Libraries**: This involves `cv2` for image processing, `numpy` for numerical operations, and more.
-  
-- **Set Global Variables**: These could be paths, default thresholds, etc.
-
-- **Configure YOLO Model**: Load model weights and set model configurations.
-
-### 2. Image Pre-processing
-- **Load Image**: Utilize `cv2` or similar libraries to read the image.
-
-- **Image Rescaling**: Ensure the image meets the size expectations of YOLO.
-
-- **Image Normalization**: Transform pixel values for optimal model interpretation.
-
-- **Image Augmentation**: Apply transformations, if needed, to enhance model accuracy.
-
-### 3. License Plate Detection
-- **Invoke YOLO Model**: Process the image through the YOLO neural network.
-
-- **Post-process Outputs**: Filter out detections below a confidence threshold.
-
-- **Draw Bounding Boxes**: Utilize the coordinates to illustrate detected regions.
-
-### 4. License Plate Details Extraction
-- **Crop License Plate**: Extract the specific region of interest.
-
-- **Apply OCR**: Tools like Tesseract help in translating image to text.
-
-- **Clean and Validate Text**: Ensure the extracted text matches license plate conventions.
-
-### 5. Data Storage
-- **Excel Initialization**: Set up Excel sheets or load existing ones.
-
-- **Data Entry**: Input the detected data in rows/columns.
-
-- **Auto-save Mechanism**: Periodically save data to prevent loss.
-
-### 6. User Interface & Feedback
-- **GUI Initialization**: If using a GUI, load up the interface.
-
-- **Display Detected Image**: Provide a visual feedback on what's detected.
-
-- **Interactive Features**: Allow users to manually adjust or confirm detections.
-
-### 7. Cleanup & Finalization
-- **Backup Data**: Periodically backup Excel data for safety.
-
-- **Log Activities**: Maintain a log for traceability and debugging.
-
-- **Close Operations**: Tidy up by closing files, releasing memory, and perhaps providing a summary report.
-
-### 8. Exception Handling
-- **Custom Error Messages**: For common issues, provide guidance.
-
-- **Error Logging**: For unseen errors, log them for future debugging.
-
-- **Graceful Exit**: Even in error states, ensure the program closes neatly without causing other disruptions.
-
-### 9. Additional Features
-- **Updates & Upgrades**: Regularly check for model upgrades or dataset updates.
-
-- **User Customizations**: Allow users to set preferences, like confidence thresholds or specific regions to scan.
-
-- **Extendable Modules**: Design the code such that future features or improvements can be plugged in without major overhauls.
+    ### 1. Initialization
+    - **Load Essential Libraries**: This involves `cv2` for image processing, `numpy` for numerical operations, and more.
+      
+    - **Set Global Variables**: These could be paths, default thresholds, etc.
+    
+    - **Configure YOLO Model**: Load model weights and set model configurations.
+    
+    ### 2. Image Pre-processing
+    - **Load Image**: Utilize `cv2` or similar libraries to read the image.
+    
+    - **Image Rescaling**: Ensure the image meets the size expectations of YOLO.
+    
+    - **Image Normalization**: Transform pixel values for optimal model interpretation.
+    
+    - **Image Augmentation**: Apply transformations, if needed, to enhance model accuracy.
+    
+    ### 3. License Plate Detection
+    - **Invoke YOLO Model**: Process the image through the YOLO neural network.
+    
+    - **Post-process Outputs**: Filter out detections below a confidence threshold.
+    
+    - **Draw Bounding Boxes**: Utilize the coordinates to illustrate detected regions.
+    
+    ### 4. License Plate Details Extraction
+    - **Crop License Plate**: Extract the specific region of interest.
+    
+    - **Apply OCR**: Tools like Tesseract help in translating image to text.
+    
+    - **Clean and Validate Text**: Ensure the extracted text matches license plate conventions.
+    
+    ### 5. Data Storage
+    - **Excel Initialization**: Set up Excel sheets or load existing ones.
+    
+    - **Data Entry**: Input the detected data in rows/columns.
+    
+    - **Auto-save Mechanism**: Periodically save data to prevent loss.
+    
+    ### 6. User Interface & Feedback
+    - **GUI Initialization**: If using a GUI, load up the interface.
+    
+    - **Display Detected Image**: Provide a visual feedback on what's detected.
+    
+    - **Interactive Features**: Allow users to manually adjust or confirm detections.
+    
+    ### 7. Cleanup & Finalization
+    - **Backup Data**: Periodically backup Excel data for safety.
+    
+    - **Log Activities**: Maintain a log for traceability and debugging.
+    
+    - **Close Operations**: Tidy up by closing files, releasing memory, and perhaps providing a summary report.
+    
+    ### 8. Exception Handling
+    - **Custom Error Messages**: For common issues, provide guidance.
+    
+    - **Error Logging**: For unseen errors, log them for future debugging.
+    
+    - **Graceful Exit**: Even in error states, ensure the program closes neatly without causing other disruptions.
+    
+    ### 9. Additional Features
+    - **Updates & Upgrades**: Regularly check for model upgrades or dataset updates.
+    
+    - **User Customizations**: Allow users to set preferences, like confidence thresholds or specific regions to scan.
+    
+    - **Extendable Modules**: Design the code such that future features or improvements can be plugged in without major overhauls.
 
 
 >> **Tips to avoid problems:**
