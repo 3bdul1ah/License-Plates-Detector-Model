@@ -258,6 +258,11 @@ git pull origin master
 ```
 
 
+#Feture updates for the project:
+
+- **Updating the AI model**: Using yolov11 for better results.
+- **Creating a smaller model**: Using tiny model instead of nano for more enhanced results when raspberry pi is used.  
+
 
 
 
